@@ -1,55 +1,55 @@
 Проводим первоначальное сканирование сети.
-!![Pasted_image_20260823142419.png](assets/Pasted_image_20260823142419.png)
+!![Posted_image_20260823142419.png](assets/Posted_image_20260823142419.png)
 
 Сразу бросается в глаза открытый ftp порт и nmap указал что в него можно зайти через anonymous.
-!![Pasted_image_20260823142618.png](assets/Pasted_image_20260823142618.png)
+!![Posted_image_20260823142618.png](assets/Posted_image_20260823142618.png)
 
 Видим что на ftp лежит записка(Записка для Джейка)
 Выгрузим её себе на систему.
-!![Pasted_image_20260823143030.png](assets/Pasted_image_20260823143030.png)
+!![Posted_image_20260823143030.png](assets/Posted_image_20260823143030.png)
 
-!![Pasted_image_20260823143052.png](assets/Pasted_image_20260823143052.png)
+!![Posted_image_20260823143052.png](assets/Posted_image_20260823143052.png)
 Перевод:  "Джейк, пожалуйста, смени пароль. Он слишком слабый, и Холт будет в ярости, если кто-нибудь взломает систему 99-го участка. "
 На данный момент,это мало что дает,перейдем к 80 порту и зайдем на сайт.
-!![Pasted_image_20260823143239.png](assets/Pasted_image_20260823143239.png)
+!![Posted_image_20260823143239.png](assets/Posted_image_20260823143239.png)
 Перевод:  "В этом примере создается фоновое изображение на всю страницу. Попробуйте изменить размер окна браузера, чтобы увидеть, как оно всегда заполняет весь экран (при прокрутке в самое начало) и корректно масштабируется на экранах любого размера. "
 Зайдем в DevTools  "F12 "
 Видим подсказку
 
-!![Pasted_image_20260823143408.png](assets/Pasted_image_20260823143408.png)
+!![Posted_image_20260823143408.png](assets/Posted_image_20260823143408.png)
 
 Скачаем картинку и попробуем ее изучить
-!![Pasted_image_20260823144016.png](assets/Pasted_image_20260823144016.png)
+!![Posted_image_20260823144016.png](assets/Posted_image_20260823144016.png)
 
 ExifTool особо ничего не дал.Попробуем другой вариант со steghide.
-!![Pasted_image_20260823144327.png](assets/Pasted_image_20260823144327.png)
+!![Posted_image_20260823144327.png](assets/Posted_image_20260823144327.png)
 
 Нужен пароль.Пробуем взаимодействовать через stegseek.
-!![Pasted_image_20260823144740.png](assets/Pasted_image_20260823144740.png)
+!![Posted_image_20260823144740.png](assets/Posted_image_20260823144740.png)
 
 Как видим steegseek нам помог.
-!![Pasted_image_20260823144849.png](assets/Pasted_image_20260823144849.png)
+!![Posted_image_20260823144849.png](assets/Posted_image_20260823144849.png)
 
 Выгрузим что было в картинке через steghide указав найденный пароль  "admin "
-!![Pasted_image_20260823144931.png](assets/Pasted_image_20260823144931.png)
+!![Posted_image_20260823144931.png](assets/Posted_image_20260823144931.png)
 
 Вот и пароль -  "fluffydog12@ninenine "
 Если вернуться назад,вспомним что открыт ssh,думаю стоит попробовать подключиться через него c полученными данными.
-!![Pasted_image_20260823145409.png](assets/Pasted_image_20260823145409.png)
+!![Posted_image_20260823145409.png](assets/Posted_image_20260823145409.png)
 
 Найденный юзер не подходит,но в это сериале brokly 9-9,фамилия капитана пишется как  Holt 
 user - holt
 pass - fluffydog12@ninenine
-!![Pasted_image_20260823145844.png](assets/Pasted_image_20260823145844.png)
+!![Posted_image_20260823145844.png](assets/Posted_image_20260823145844.png)
 
 Успех,знакомимся со системой и смотрим кто мы,где мы,и что нам можно.
-!![Pasted_image_20260823145909.png](assets/Pasted_image_20260823145909.png)
+!![Posted_image_20260823145909.png](assets/Posted_image_20260823145909.png)
 
 Сразу забираем первый флаг
-!![Pasted_image_20260823145947.png](assets/Pasted_image_20260823145947.png)
+!![Posted_image_20260823145947.png](assets/Posted_image_20260823145947.png)
 
 Видим что нам разрешена команда  nano  от имени root.Сразу же воспользуемся этим.
-!![Pasted_image_20260823150110.png](assets/Pasted_image_20260823150110.png)
+!![Posted_image_20260823150110.png](assets/Posted_image_20260823150110.png)
 
 flag 1 - ee11cbb19052e40b07aac0ca060c23ee
 flag 2 - 63a9f0ea7bb98050796b649e85481845
