@@ -63,5 +63,7 @@ uid=1000(think) gid=1000(think) groups=1000(think)
 ![Sudo Look](assets/sudo_look.png)
 **Команда:**  
 `look "" имя_файла.txt`
+
+
 ![User Flag](assets/user_flag.png)
 
