@@ -32,7 +32,7 @@ pass - fluffydog12@ninenine
 ![Pasted image 20260823145909.png](./brooklyn-nine-nine/assets/Pasted image 20260823145909.png)
 Сразу забираем первый флаг
 ![Pasted image 20260823145947.png](./brooklyn-nine-nine/assets/Pasted image 20260823145947.png)
-Видим что нам разрешена команда **nano** от имени root.Сращу же воспользуемся этим.
+Видим что нам разрешена команда **nano** от имени root.Сразу же воспользуемся этим.
 ![Pasted image 20260823150110.png](./brooklyn-nine-nine/assets/Pasted image 20260823150110.png)
 flag 1 - ee11cbb19052e40b07aac0ca060c23ee
 flag 2 - 63a9f0ea7bb98050796b649e85481845
